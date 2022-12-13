@@ -72,7 +72,7 @@ func(self *Exports) GetKeys() []string {
 	for k,_ := range self.exports {
 		exports = append(exports, k)
 	}
-	return k
+	return exports
 }
 
 func(self *Exports) GetExports() map[string]*Extern {
