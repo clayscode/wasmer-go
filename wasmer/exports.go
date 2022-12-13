@@ -67,6 +67,18 @@ func (self *Exports) Get(name string) (*Extern, error) {
 	return export, nil
 }
 
+func(self *Exports) GetKeys() []string {
+	exports := []string{}
+	for k,_ := range self.exports {
+		exports = append(exports, k)
+	}
+	return k
+}
+
+func(self *Exports) GetExports() map[string]*Extern {
+	return self.exports
+}
+
 // GetRawFunction retrieves and returns an exported Function by its name.
 //
 // Note: If the name does not refer to an existing export,
